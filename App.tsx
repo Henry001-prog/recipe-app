@@ -1,6 +1,6 @@
 import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import { LoginScreen } from "./src/LoginScreen";
 import { ThemeContext, ThemeProvider } from "styled-components/native";
 import { useState } from "react";
@@ -32,9 +32,14 @@ export default function App() {
     Lora_700Bold_Italic,
   });
 
+  if (!fontsLoaded) {
+    return <ActivityIndicator size="large" color="#0000ff" />; // Exibe um indicador de carregamento
+  }
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <ThemeProvider theme={light}>
+        <StatusBar style="auto" />
         <Routes />
       </ThemeProvider>
     </ThemeContext.Provider>

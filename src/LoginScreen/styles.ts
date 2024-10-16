@@ -33,6 +33,7 @@ export const Container = styled.View<ITheme>`
 
 export const Content = styled.View<ITheme>`
     flex: 1;
+    width: 100%;
     background-color: ${({ theme }: ITheme) => theme.colors.green};
     align-items: center;
     justify-content: center;
@@ -57,7 +58,7 @@ export const AppName = styled.Text<ITheme>`
 
 export const ForgotPasswordView = styled.View<ITheme>`
     align-items: flex-end;
-    width: 365px;
+    width: 100%;
     font-family: ${({ theme }: ITheme) => theme.fonts.Lora_400Regular};
 `;
 
@@ -67,9 +68,13 @@ export const Text = styled.Text<ITheme>`
     font-family: ${({ theme }: ITheme) => theme.fonts.Lora_400Regular};
 `;
 
+export const ViewInput = styled.View`
+    width: 80%;
+`;
+
 export const Input = styled.TextInput<ITheme>`
     height: 55px;
-    width: 365px;
+    width: 100%;
     color: ${({ theme }: ITheme) => theme.colors.white};
     padding: 10px;
     border-width: 1px;

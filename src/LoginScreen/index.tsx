@@ -8,6 +8,7 @@ import {
   Content,
   AppName,
   ForgotPasswordView,
+  ViewInput,
 } from "./styles";
 import { useTheme } from "styled-components/native";
 
@@ -21,6 +22,7 @@ export function LoginScreen() {
         <Title>Encontre Seu Próximo Prato Favorito</Title>
 
         <Input placeholder="Email" placeholderTextColor={theme.colors.white} />
+
         <Input
           placeholder="Password"
           placeholderTextColor={theme.colors.white}
